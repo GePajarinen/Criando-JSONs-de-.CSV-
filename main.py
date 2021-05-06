@@ -17,6 +17,10 @@ def _descrp(string):
  c = s.decode("utf-8")
  return c
 
+def _string(string):
+  #print(string)
+  return str(string)
+
 
 def _tipo(string):
   if string == 'VARCHAR2':
@@ -35,6 +39,7 @@ destino = arquivo[:-3] + 'json'
 
 conta = len(open(arquivo).readlines())
 maxi = conta
+linhas = 0
 
 with open(arquivo, 'r') as read_obj:
     
@@ -49,13 +54,14 @@ with open(arquivo, 'r') as read_obj:
       typo = _tipo(typo)
      
       #MODE:
-      if row[2] == 'true':
+      if row[2] == 'Yes':
         mode = "NULLABLE"
       else:
         mode = "REQUIRED"
 
       #DESCRIPTION:
-      description = _descrp(row[5])
+      description = _string(row[5])
+      #description = _descrp(row[5]) #come as letras
 
 
       x = {
@@ -66,7 +72,8 @@ with open(arquivo, 'r') as read_obj:
       }
       # convert into JSON:
       j = json.dumps(x)
-      #print(j)
+
+      linhas = linhas +1
 
       with open(destino, 'a') as fp:
         pass
@@ -84,3 +91,4 @@ with open(arquivo, 'r') as read_obj:
       conta=conta-1
       
 print("Pronto!")
+print("Total de linhas: {}".format(linhas))
