@@ -16,7 +16,7 @@ Rodar o arquivo main.py.
 A execução pede o nome do arquivo. Escreva-o sem a extensão. Exemplo: se o nome do arquivo for lista_comercial.csv escreva somente lista_comercial.   
 Logo então, o arquivo json será criado dentro desta pasta.    
 
-Problemas que podem ocorrer:
+### Problemas que podem ocorrer:
 Se os dados expostados do Oracle estiverem no formato errado.
 Se houver espaços de enter e/ou tabs dentro das linhas de cometário.
 Para solucionar estes problemas, você deveria arrumar os dados manualmente ou utilizar de outra ferramenta.
@@ -37,7 +37,7 @@ Nele, as conversões de caracteres são corrigidas e também tem a opção de ed
 
 
 ### Exemplo do json:
-
+``` json
 [
     {
       "name": "id",
@@ -70,4 +70,5 @@ Nele, as conversões de caracteres são corrigidas e também tem a opção de ed
       "description": "Fecha de ultimo cambio de estado"
     },
   ]
+```
 OK no REPLIT e no VS code. Mas queria fazer funcionar no cmd
