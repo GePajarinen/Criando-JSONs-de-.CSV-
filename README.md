@@ -75,7 +75,7 @@ Nele, as conversões de caracteres são corrigidas e também tem a opção de ed
       "type": "TIMESTAMP",
       "mode": "REQUIRED",
       "description": "Fecha de ultimo cambio de estado"
-    },
+    }
   ]
 ```
 OK no REPLIT e no VS code. Mas queria fazer funcionar no cmd
