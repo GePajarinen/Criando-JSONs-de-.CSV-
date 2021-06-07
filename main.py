@@ -3,6 +3,7 @@ import re
 import json
 
 '''
+As colunas que veêm da exportação do Oracle:
 -- SEM cabeçalho
 0."COLUMN_NAME",*
 1."DATA_TYPE",*
@@ -23,7 +24,7 @@ def _string(string):
 
 
 def _tipo(string):
-  if string == 'VARCHAR2':
+  if string == 'VARCHAR2' or string == 'CHAR':
     return "STRING";
   if string == 'NUMBER':
     return "NUMERIC";
